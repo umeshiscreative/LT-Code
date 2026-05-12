@@ -9,7 +9,7 @@ public class KnapSack {
         System.out.println(obj.knapsack(W, val, wt));        
     }
 
-    // This recusrion solution may be time limit exceed on 
+    // This recusrion solution may be time limit exceed on Geeks for Geeks inputs
     public int knapsack(int W, int val[], int wt[]) {
         int idx = wt.length;
         return helper(W, val, wt, idx);
