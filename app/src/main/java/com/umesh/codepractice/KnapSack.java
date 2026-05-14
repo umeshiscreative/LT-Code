@@ -5,11 +5,35 @@ public class KnapSack {
     int[][] dp = null;
 
     public static void main(String[] args) {
-        int wt[] = new int[]{4, 5, 1};
-        int val[] = new int[]{1, 2, 3};
-        int W = 4;
-        KnapSack obj = new KnapSack();
-        System.out.println(obj.knapsack(W, val, wt));
+        // int wt[] = new int[]{4, 5, 1};
+        // int val[] = new int[]{1, 2, 3};
+        // int W = 4;
+        // KnapSack obj = new KnapSack();
+        // System.out.println(obj.knapsack(W, val, wt));
+
+        System.err.println(isSubsetSum(new int[]{11, 48, 24, 83}, 83) ? "true" : "false");
+    }
+
+    static Boolean isSubsetSum(int arr[], int sum) {
+        int idx = arr.length;
+        return helper(arr, sum, idx);
+    }
+
+    static Boolean helper(int arr[], int sum, int idx) {
+        if (sum == 0) {
+            return true;
+        }
+
+        if (idx == 0) {
+            return false;
+        }
+
+        if (arr[idx - 1] <= sum) {
+            return helper(arr, sum - arr[idx - 1], idx - 1) || helper(arr, sum, idx - 1);
+        } else if (arr[idx - 1] > sum) {
+            return helper(arr, sum, idx - 1);
+        }
+        return null;
     }
 
     // This recusrion solution may be time limit exceed on Geeks for Geeks inputs

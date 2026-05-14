@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "LC698",
+      "request": "launch",
+      "mainClass": "com.umesh.codepractice.LC698",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
+      "name": "EqualSumPartition",
+      "request": "launch",
+      "mainClass": "com.umesh.codepractice.EqualSumPartition",
+      "projectName": "app"
+    },
+    {
+      "type": "java",
       "name": "KnapSack",
       "request": "launch",
       "mainClass": "com.umesh.codepractice.KnapSack",
